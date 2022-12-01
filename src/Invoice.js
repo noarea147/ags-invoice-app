@@ -22,7 +22,6 @@ export default function Invoice() {
       const imgData = canvas.toDataURL("image/jpeg");
       const pdf = new jsPDF();
       pdf.addImage(imgData, "JPEG", 0, 0, width, height);
-      // pdf.output('dataurlnewwindow');
       pdf.save("download.pdf");
     });
   };
